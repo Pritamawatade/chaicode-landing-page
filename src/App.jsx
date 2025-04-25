@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import HeroSection from './components/HeroSection/HeroSection'
+import YtVieo from './components/YtVideo/YtVieo'
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <>
     <Navbar/>
     <HeroSection />
+    <YtVieo />
     </>
   )
 }

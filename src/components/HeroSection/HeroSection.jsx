@@ -34,24 +34,29 @@ export default function HeroSection() {
 
         {/* Heading */}
         <motion.h1
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6"
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6 selection:bg-orange-500 selection:text-white"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          An <span className="text-[#e85c0c]">&lt;Unmatched /&gt;</span>{" "}
+          An{" "}
+          <span className="text-[#e85c0c] selection:bg-orange-500 selection:text-white">
+            &lt;Unmatched /&gt;
+          </span>{" "}
           Learning Experience for coding courses.
         </motion.h1>
 
         {/* Paragraph */}
         <motion.p
-  className="text-gray-300 text-lg sm:text-xl mb-10 mx-auto text-center leading-relaxed max-w-xl sm:max-w-2xl md:max-w-xl lg:max-w-2xl xl:max-w-3xl"
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, delay: 0.2 }}
->
-  Content is everywhere, but we provide a learning experience that is unmatched — bounties, peer learning, code reviews, virtual hostel, alumni network, doubt sessions, and group projects.
-</motion.p>
+          className="text-gray-300 text-lg sm:text-xl mb-10 mx-auto text-center leading-relaxed max-w-xl sm:max-w-2xl md:max-w-xl lg:max-w-2xl xl:max-w-3xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          Content is everywhere, but we provide a learning experience that is
+          unmatched — bounties, peer learning, code reviews, virtual hostel,
+          alumni network, doubt sessions, and group projects.
+        </motion.p>
 
         {/* CTA */}
         <motion.div

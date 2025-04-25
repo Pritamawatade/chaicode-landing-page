@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <div className="flex justify-center w-full p-4">
       <motion.nav
-        className="bg-[#2c2d2e] bg-opacity-10 backdrop-blur-sm rounded-xl shadow-lg px-6 py-1 w-auto max-w-4xl"
+        className="bg-[#1a1816ac] bg-opacity-10 backdrop-blur-sm rounded-xl shadow-lg px-6 py-1 w-auto max-w-4xl"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -115,7 +115,7 @@ function NavLinks({ mobile = false }) {
           className={`text-white hover:text-gray-50 flex items-center ${
             mobile ? "py-2" : ""
           }`}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ y:-4 }}
           whileTap={{ scale: 0.95 }}
         >
           <span className="flex items-center space-x-2">

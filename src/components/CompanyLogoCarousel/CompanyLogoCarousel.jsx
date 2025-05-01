@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import DeviderLine from '../DeviderLine/DeviderLine';
 
+
 // Company logos data
 const tech_companies = [
   { name: 'Google', logo: '🔍' },
@@ -112,7 +113,7 @@ export default function CompanyLogoCarousel() {
       </div>
 
   
-  <DeviderLine />
+  {/* <DeviderLine /> */}
     </div>
   );
 }

@@ -247,7 +247,6 @@ function TweetSection() {
 
         <LiquidHoverButton />\
 
-        <DeviderLine />
     </div>
   );
 }

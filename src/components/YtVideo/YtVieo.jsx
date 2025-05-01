@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-function YtVieo() {
+
+function YtVideo() {
   return (
-    <>
-      <div className="relative w-fit mx-auto mt-12 group p-8">
+    <div className="relative w-full px-4 sm:px-8 xl:px-0 mx-auto mt-12 group">
       {/* Animated border layer */}
       <motion.div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none z-10"
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
         transition={{
@@ -15,26 +15,22 @@ function YtVieo() {
           ease: "linear",
         }}
       >
-        <svg
-          className="w-full h-full"
-          viewBox="0 0 900 500"
-          preserveAspectRatio="none"
-        >
+        <svg className="w-full h-full" viewBox="0 0 1000 562.5" preserveAspectRatio="none">
           <motion.rect
             x="0"
             y="0"
-            width="900"
-            height="500"
+            width="1000"
+            height="562.5"
             rx="32"
             ry="32"
             fill="none"
             stroke="url(#borderGradient)"
             strokeWidth="4"
-            strokeDasharray="1400"
+            strokeDasharray="2000"
             strokeDashoffset="0"
-            initial={{ strokeDashoffset: 1400 }}
+            initial={{ strokeDashoffset: 2000 }}
             animate={{
-              strokeDashoffset: [1400, 0],
+              strokeDashoffset: [2000, 0],
             }}
             transition={{
               repeat: Infinity,
@@ -54,23 +50,21 @@ function YtVieo() {
       </motion.div>
 
       {/* Video container */}
-      <div className="p-0 rounded-3xl overflow-hidden border-4 border-transparent  transition-all duration-300">
-        <iframe
-          className="rounded-2xl"
-          width="900"
-          height="500"
-          src="https://www.youtube.com/embed/VNb_LawBBWU?si=TjAUsAYus0YHZ6eJ"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
+      <div className="relative z-20 w-full max-w-7xl mx-auto rounded-3xl overflow-hidden border-4 border-transparent transition-all duration-300">
+        <div className="aspect-video w-full">
+          <iframe
+            className="w-full h-full rounded-2xl"
+            src="https://www.youtube.com/embed/VNb_LawBBWU?si=TjAUsAYus0YHZ6eJ"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
-      
     </div>
-    </>
   );
 }
 
-export default YtVieo;
+export default YtVideo;

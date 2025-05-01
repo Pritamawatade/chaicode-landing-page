@@ -6,9 +6,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex justify-center items-center w-full p-4">
+    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center items-center w-full p-4 mb-4 rounded-2xl px-8">
       <motion.nav
-        className="bg-[#1a1816ac] bg-opacity-10 backdrop-blur-sm rounded-xl shadow-lg px-6 py-1 w-auto max-w-4xl"
+        className="bg-[#1a1816ac] bg-opacity-10 backdrop-blur-sm rounded-xl shadow-lg px-6 py-1 w-full "
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -32,15 +32,17 @@ export default function Navbar() {
             <NavLinks />
 
             {/* Login Button */}
-            <motion.button
-              className="bg-[#e85c0c] cursor-pointer hover:bg-orange-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <LogIn size={18} />
-              <a href="https://courses.chaicode.com/learn/account/signin" >Login</a>
-            </motion.button>
+      
           </div>
+          <motion.button
+            className={`hidden md:flex bg-[#e85c0c] cursor-pointer hover:bg-orange-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <LogIn size={18} />
+            <a href="https://courses.chaicode.com/learn/account/signin" >Login</a>
+          </motion.button>
+       
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">

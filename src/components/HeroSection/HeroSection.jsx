@@ -13,7 +13,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <div className="bg-black text-white py-12 px-6 md:px-12 lg:px-24">
+    <div className="bg-black text-white py-12 px-6 md:px-12 lg:px-24 mt-16">
       <div className="max-w-4xl mx-auto text-center">
         {/* Badge */}
         <motion.div

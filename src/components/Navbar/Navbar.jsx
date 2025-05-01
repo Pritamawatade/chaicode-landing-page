@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex justify-center w-full p-4">
+    <div className="flex justify-center items-center w-full p-4">
       <motion.nav
         className="bg-[#1a1816ac] bg-opacity-10 backdrop-blur-sm rounded-xl shadow-lg px-6 py-1 w-auto max-w-4xl"
         initial={{ opacity: 0, y: -20 }}
@@ -112,7 +112,7 @@ function NavLinks({ mobile = false }) {
         <motion.a
           key={index}
           href={item.link}
-          className={`text-white hover:text-gray-50 flex items-center ${
+          className={`text-white hover:text-orange-500 transition-colors duration-50 flex items-center ${
             mobile ? "py-2" : ""
           }`}
           whileHover={{ y:-4 }}

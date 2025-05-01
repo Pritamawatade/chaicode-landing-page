@@ -6,6 +6,7 @@ import TweetSection from "./components/TweetLove/TweetSection";
 import CompanyLogoCarousel from "./components/CompanyLogoCarousel/CompanyLogoCarousel";
 import Aos from "aos";
 import CohortSection from "./components/CohortSection/CohortSection";
+import TestimonialsSection from "./components/Testimonials/Testimonials";
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
       <TweetSection />
       <CompanyLogoCarousel />
       <CohortSection />
+      <TestimonialsSection />
     </>
   );
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Twitter, Loader2, ArrowRight } from "lucide-react";
 import DeviderLine from "../DeviderLine/DeviderLine";
-import LiquidHoverButton from "../Button/LiquidButton";
+import PremiumButton from "../Button/LiquidButton";
 
 function TweetSection() {
   const [isLoading, setIsLoading] = useState(true);
@@ -93,47 +93,43 @@ function TweetSection() {
           // Show actual tweets once loaded
           <>
             <div className="tweetCard w-full md:w-auto min-w-0 overflow-hidden p-2 flex-1">
-              <blockquote
+            <blockquote
                 className="twitter-tweet"
                 data-theme="dark"
                 data-dnt="true"
                 align="center"
               >
                 <p lang="en" dir="ltr">
-                  When the hard work of the{" "}
-                  <a href="https://twitter.com/bharatui?ref_src=twsrc%5Etfw">
-                    @bharatui
-                  </a>{" "}
-                  team finally paid off! But honestly, having{" "}
+                  it's all started in January
+                  <br />
+                  <br />
+                  Best cohort ever
+                  <br />
+                  <br />
+                  couldn't thank myself enough for enrolling in the cohort
+                  <br />
+                  <br />
+                  After this cohort I realize that
+                  <br />
+                  <br />
+                  what's the difference between learning with mentor and
+                  randomly watching tutorials
+                  <br />
+                  <br />
+                  it's experience is crazy
+                  <br />
+                  <br />
+                  So again thanks{" "}
                   <a href="https://twitter.com/Hiteshdotcom?ref_src=twsrc%5Etfw">
                     @Hiteshdotcom
-                  </a>{" "}
-                  mentor us has been the greatest reward of all.
-                  <br />
-                  <br />
-                  Grateful for the amazing teammates I get to work with.
-                  <a href="https://twitter.com/hashtag/ChaiCode?src=hash&amp;ref_src=twsrc%5Etfw">
-                    #ChaiCode
-                  </a>{" "}
-                  <a href="https://twitter.com/hashtag/BharatUI?src=hash&amp;ref_src=twsrc%5Etfw">
-                    #BharatUI
-                  </a>{" "}
-                  <a href="https://twitter.com/620Sundram?ref_src=twsrc%5Etfw">
-                    @620Sundram
-                  </a>{" "}
-                  <a href="https://twitter.com/AniketDey_?ref_src=twsrc%5Etfw">
-                    @AniketDey_
-                  </a>{" "}
-                  <a href="https://twitter.com/sashpawar11?ref_src=twsrc%5Etfw">
-                    @sashpawar11
-                  </a>{" "}
-                  <a href="https://twitter.com/tiwari_shyam55?ref_src=twsrc%5Etfw">
-                    @tiwari_shyam55
                   </a>
-                  …
                 </p>
-                <a href="https://twitter.com/_saumya_ag/status/1916911783584899557?ref_src=twsrc%5Etfw">
-                  April 28, 2025
+                &mdash;{" "}
+                <a href="https://twitter.com/Pritam_Awatade/status/1917588204506734937?ref_src=twsrc%5Etfw">
+                  Pritam (@Pritam_Awatade)
+                </a>{" "}
+                <a href="https://twitter.com/Pritam_Awatade/status/1917588204506734937?ref_src=twsrc%5Etfw">
+                  April 30, 2025
                 </a>
               </blockquote>
               <script
@@ -245,7 +241,7 @@ function TweetSection() {
 
       {/* Start Learning button */}
 
-        <LiquidHoverButton />\
+        <PremiumButton />\
 
     </div>
   );

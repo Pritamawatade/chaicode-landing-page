@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { UsersRound } from "lucide-react";
-import discordImg from "../../assets/icons8-discord.svg";
+import discordImg from "../../assets/discord.svg";
 
 const CommunitySection = () => {
   return (
@@ -36,6 +36,7 @@ const CommunitySection = () => {
 
         {/* Discord Image */}
         <motion.div
+          whileHover={{ scale: 1.05 }}  
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, ease: "backOut" }}
@@ -47,7 +48,7 @@ const CommunitySection = () => {
             alt="Discord Preview"
             width={400}
             height={300}
-            className="rounded-xl border border-white/20 shadow-xl"
+            className="rounded-xl border border-white/20 shadow-xl hover:shadow-[0_10px_10px_-5px_#e85c0c] transition-all duration-300 relative"
           />
         </motion.div>
       </motion.div>

@@ -206,7 +206,7 @@ const CourseCard = ({ course, isActive }) => {
         {/* Easter Egg - Floating Code */}
         <AnimatePresence>
           {isHovered && (
-            <div className="opacity-30">
+            <div className="opacity-75">
               <motion.div
               className="absolute opacity-0 -right-20 top-6 text-xs font-mono text-gray-500 bg-transparent p-2 rounded shadow-md 
               transform -rotate-6 select-none"

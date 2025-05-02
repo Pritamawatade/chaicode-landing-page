@@ -1,15 +1,57 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Users, Code, BookOpen, MessageSquare, Award , DollarSign } from "lucide-react";
+import {
+  Users,
+  Code,
+  BookOpen,
+  MessageSquare,
+  Award,
+  DollarSign,
+  CheckCheck,
+  LaptopMinimal,
+  SquareChevronRight
+} from "lucide-react";
 import CountUp from "react-countup";
 
 export default function HeroSection() {
   const features = [
-    { text: "Peer learning", icon: <Users size={18} /> },
-    { text: "Code reviews", icon: <Code size={18} /> },
-    { text: "Virtual hostel", icon: <BookOpen size={18} /> },
-    { text: "Doubt sessions", icon: <MessageSquare size={18} /> },
-    { text: "Bounties", icon: <Award size={18} /> },
+    {
+      text: "Peer learning",
+      icon: <Users size={18} />,
+      hoverIcon: (
+        <Users
+          size={32}
+          className="text-white filter drop-shadow-[0_0_1px_#ffa500]"
+        />
+      ),
+    },
+    { text: "Code reviews", icon: <Code size={18} />,
+    hoverIcon: (
+      <SquareChevronRight
+        size={32}
+        className="text-white filter drop-shadow-[0_0_1px_#ffa500]"
+      />
+    ), },
+    { text: "Virtual hostel", icon: <BookOpen size={18} />,
+    hoverIcon: (
+      <LaptopMinimal
+        size={32}
+        className="text-white filter drop-shadow-[0_0_1px_#ffa500]"
+      />
+    ), },
+    { text: "Doubt sessions", icon: <MessageSquare size={18} />,
+    hoverIcon: (
+      <CheckCheck
+        size={32}
+        className="text-white filter drop-shadow-[0_0_1px_#ffa500]"
+      />
+    ), },
+    { text: "Bounties", icon: <Award size={18} />, hoverIcon: (
+      <DollarSign
+        size={32}
+        className="text-white filter drop-shadow-[0_0_1px_#ffa500]"
+      />
+    ), },
   ];
 
   return (
@@ -39,8 +81,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <span className="text-orange-500 lg:text-7xl">C</span>onsistancy
-          And {" "}
+          <span className="text-orange-500 lg:text-7xl">C</span>onsistancy And{" "}
           <span className="text-orange-500 lg:text-7xl">C</span>ommunity
         </motion.h1>
         <motion.h1
@@ -102,28 +143,50 @@ export default function HeroSection() {
             },
           }}
         >
-          
           {features.map((feature, index) => (
-            
             <motion.div
               key={index}
-              whileHover={{ y: -6 }}
-              className="flex items-center gap-2 hover:bg-[#412205] border-orange-600 rounded-full bg-transparent px-4 py-2 text-gray-200 cursor-pointer "
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
+              className="relative flex items-center gap-2 border border-orange-600 rounded-full bg-transparent px-4 py-2 text-gray-200 cursor-pointer hover:bg-[#412205]  group"
+              whileHover="hover"
+              initial="rest"
+              animate="rest"
             >
-              <div className="text-[#e85c0c]">{feature.icon}</div>
-              <span>{feature.text}</span>
+              {/* Always visible icon and text */}
+              <div className="text-[#e85c0c] z-10">{feature.icon}</div>
+              <span className="z-10">{feature.text}</span>
+
+              {/* Animated Dollar Sign */}
+              <motion.div
+                variants={{
+                  rest: {
+                    opacity: 0,
+                    x: 40,
+                    rotateY: 90,
+                    scale: 0.3,
+                  },
+                  hover: {
+                    opacity: 1,
+                    x: 0,
+                    rotateY: 0,
+                    scale: 1,
+                    transition: {
+                      duration: 0.6,
+                      type: "spring",
+                      stiffness: 200,
+                      damping: 15,
+                    },
+                  },
+                }}
+                className="absolute right-8 top-[-5px ] -translate-y-1/2 z-0"
+              >
+                <span className=" rounded-full p-1 ">
+              {feature.hoverIcon}
+                </span>
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>
       </div>
-
-
-
-
     </div>
   );
 }

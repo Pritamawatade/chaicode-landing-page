@@ -13,6 +13,7 @@ import WhyChooseUs from "./components/WhyChaiCodeSection/WhyChaiCodeSection";
 import TopicsCloud from "./components/TagSection/TagSection";
 import CommunitySection from "./components/CommunitySection/CommunitySection";
 import FreeAPIOpenSource from "./components/FreeAPIOpenSource/FreeAPIOpenSource";
+import MobileAppSection from "./components/MobileApp/MobileAppSection";
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
       <TopicsCloud />
       <CommunitySection />
       <FreeAPIOpenSource />
+      <MobileAppSection />
     </>
   );
 }

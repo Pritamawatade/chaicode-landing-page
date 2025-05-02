@@ -206,15 +206,18 @@ const CourseCard = ({ course, isActive }) => {
         {/* Easter Egg - Floating Code */}
         <AnimatePresence>
           {isHovered && (
-            <motion.div
-              className="absolute -right-20 top-6 text-xs font-mono text-gray-500 bg-gray-100 p-2 rounded shadow-md transform -rotate-6 select-none"
+            <div className="opacity-30">
+              <motion.div
+              className="absolute opacity-0 -right-20 top-6 text-xs font-mono text-gray-500 bg-transparent p-2 rounded shadow-md 
+              transform -rotate-6 select-none"
               initial={{ opacity: 0, scale: 0.7, right: "-80px" }}
               animate={{ opacity: 0.8, scale: 1, right: "-70px" }}
               exit={{ opacity: 0, scale: 0.7, right: "-80px" }}
               transition={{ duration: 0.3 }}
             >
-              <pre>{codeEasterEgg}</pre>
+              <pre className="opacity-100">{codeEasterEgg}</pre>
             </motion.div>
+            </div>
           )}
         </AnimatePresence>
 

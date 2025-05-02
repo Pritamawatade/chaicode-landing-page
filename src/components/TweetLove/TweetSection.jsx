@@ -92,7 +92,7 @@ function TweetSection() {
         ) : (
           // Show actual tweets once loaded
           <>
-            <div className="tweetCard w-full md:w-auto min-w-0 overflow-hidden p-2 flex-1">
+            <div className="tweetCard bg-neutral-800 rounded-2xl px-4 py-6 hover:scale-[1.02] transition-all duration-300 mx-2 cursor-pointer w-full md:w-[30%] min-w-0 overflow-visible flex-1">
             <blockquote
                 className="twitter-tweet"
                 data-theme="dark"
@@ -139,7 +139,7 @@ function TweetSection() {
               />
             </div>
 
-            <div className="tweetCard w-full md:w-auto min-w-0 overflow-hidden p-2 flex-1">
+            <div className="tweetCard bg-neutral-800 rounded-2xl px-4 py-6 hover:scale-[1.02] transition-all duration-300 mx-2 cursor-pointer w-full md:w-[30%] min-w-0 overflow-visible flex-1">
               <blockquote
                 className="twitter-tweet"
                 data-theme="dark"
@@ -186,7 +186,7 @@ function TweetSection() {
               />
             </div>
 
-            <div className="tweetCard w-full md:w-auto min-w-0 overflow-hidden p-2 flex-1">
+            <div className="tweetCard bg-neutral-800 rounded-2xl px-4 py-6 hover:scale-[1.02] transition-all duration-300 mx-2 cursor-pointer w-full md:w-[30%] min-w-0 overflow-visible flex-1">
               <blockquote
                 className="twitter-tweet"
                 data-theme="dark"
@@ -242,6 +242,7 @@ function TweetSection() {
       {/* Start Learning button */}
 
         <PremiumButton />\
+        <DeviderLine />
 
     </div>
   );

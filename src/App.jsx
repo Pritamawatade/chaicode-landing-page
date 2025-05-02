@@ -7,6 +7,7 @@ import CompanyLogoCarousel from "./components/CompanyLogoCarousel/CompanyLogoCar
 import Aos from "aos";
 import CohortSection from "./components/CohortSection/CohortSection";
 import TestimonialsSection from "./components/Testimonials/Testimonials";
+import UdemyCourseCarousel from "./components/UdemySectin/UdemySection";
 
 function App() {
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
       <CompanyLogoCarousel />
       <CohortSection />
       <TestimonialsSection />
+      <UdemyCourseCarousel />
     </>
   );
 }

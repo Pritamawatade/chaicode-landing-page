@@ -43,7 +43,7 @@ export default function CompanyLogoCarousel() {
   }, []);
 
   return (
-    <div className="w-full max-w-6xl mx-auto py-16 px-4">
+    <div className="w-full max-w-6xl mx-auto py-8 px-4">
       {/* Heading with orange gradient */}
       <motion.div
         className="mb-12 text-center"
@@ -59,14 +59,14 @@ export default function CompanyLogoCarousel() {
           Our Student Success Stories
         </motion.h2>
         <motion.p
-          className="text-xl text-gray-700 max-w-3xl mx-auto"
+          className="text-xl text-gray-300 max-w-3xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
           Our students don't just work at big tech companies—they're also
           founders of
-          <span className="font-bold text-orange-500">
+          <span className=" text-gray-300">
             {" "}
             funded startups and products
           </span>{" "}

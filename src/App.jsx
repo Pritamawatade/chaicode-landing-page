@@ -7,7 +7,12 @@ import CompanyLogoCarousel from "./components/CompanyLogoCarousel/CompanyLogoCar
 import Aos from "aos";
 import CohortSection from "./components/CohortSection/CohortSection";
 import TestimonialsSection from "./components/Testimonials/Testimonials";
-import UdemyCourseCarousel from "./components/UdemySectin/UdemySection";
+import UdemyCourseCarousel from "./components/UdemySection/UdemySection";
+import CohortBenefitsSection from "./components/Feature/Feature";
+import WhyChooseUs from "./components/WhyChaiCodeSection/WhyChaiCodeSection";
+import TopicsCloud from "./components/TagSection/TagSection";
+import CommunitySection from "./components/CommunitySection/CommunitySection";
+import FreeAPIOpenSource from "./components/FreeAPIOpenSource/FreeAPIOpenSource";
 
 function App() {
   useEffect(() => {
@@ -23,6 +28,11 @@ function App() {
       <CohortSection />
       <TestimonialsSection />
       <UdemyCourseCarousel />
+      <CohortBenefitsSection />
+      <WhyChooseUs />
+      <TopicsCloud />
+      <CommunitySection />
+      <FreeAPIOpenSource />
     </>
   );
 }

@@ -14,6 +14,7 @@ import TopicsCloud from "./components/TagSection/TagSection";
 import CommunitySection from "./components/CommunitySection/CommunitySection";
 import FreeAPIOpenSource from "./components/FreeAPIOpenSource/FreeAPIOpenSource";
 import MobileAppSection from "./components/MobileApp/MobileAppSection";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function App() {
       <CommunitySection />
       <FreeAPIOpenSource />
       <MobileAppSection />
+      <Footer />
     </>
   );
 }

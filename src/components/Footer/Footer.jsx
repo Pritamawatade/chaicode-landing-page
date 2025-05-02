@@ -9,7 +9,8 @@ import {
   Coffee,
   ArrowRight,
   ExternalLink,
-
+  MessageSquare,
+  Github
 } from 'lucide-react';
 
 export default function Footer() {
@@ -104,7 +105,9 @@ export default function Footer() {
     { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/hiteshchoudharyofficial/?hl=en", color: "text-pink-500" },
     { name: "Youtube", icon: Youtube, href: "https://www.youtube.com/@chaiaurcode", color: "text-red-500" },
     { name: "Twitter", icon: Twitter, href: "https://x.com/hiteshdotcom", color: "text-sky-400" },
-    { name: "LinkedIn", icon: Linkedin, href: "https://in.linkedin.com/in/hiteshchoudhary", color: "text-blue-500" }
+    { name: "LinkedIn", icon: Linkedin, href: "https://in.linkedin.com/in/hiteshchoudhary", color: "text-blue-500" },
+    { name: "Discord", icon: MessageSquare, href: "https://hitesh.ai/discord", color: "text-blue-500" },
+    { name: "GitHub", icon: Github , href: "https://github.com/hiteshchoudhary/chaiaurcode", color: "text-gray-400" },
   ];
   
   return (
@@ -140,8 +143,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Logo and tag line section */}
-          <div className="md:col-span-4 flex flex-col">
-            <div className="flex items-center justify-around mb-4">
+          <div className="md:col-span-6 flex flex-col">
+         
+            
+            <div className="flex items-start justify-start mb-4">
               <motion.div 
                 ref={logoRef}
                 className="relative"
@@ -173,7 +178,7 @@ export default function Footer() {
                 </AnimatePresence>
                 
                 {/* Logo */}
-                <div className="flex items-center space-x-2 relative z-10">
+                <div className="flex items-start space-x-2 relative z-10">
                   <Coffee size={28} className="text-orange-500" />
                   <span className="text-2xl font-bold text-white flex items-center">
                     Chai
@@ -197,10 +202,10 @@ export default function Footer() {
                   </span>
                 </div>
               </motion.div>
+              
             </div>
-            
             <p className="text-gray-400 mb-6">Home for programmers</p>
-            
+
             {/* Social links */}
             <div className="flex space-x-4 mb-8">
               {socialLinks.map((social) => (
@@ -226,7 +231,7 @@ export default function Footer() {
           </div>
           
           {/* Navigation sections */}
-          <div className="md:col-span-5 grid grid-cols-2 gap-8">
+          <div className="md:col-span-6 grid grid-cols-2 gap-8">
             {navLinks.map((group) => (
               <div key={group.group}>
                 <h3 className="text-white font-semibold mb-4 flex items-center">
@@ -266,8 +271,6 @@ export default function Footer() {
               </div>
             ))}
           </div>
-          
-         
         </div>
         
         {/* Cosmic footer text */}
@@ -286,14 +289,7 @@ export default function Footer() {
           </motion.div>
           
           <div className="relative z-10 flex flex-col md:flex-row justify-between items-center">
-            <motion.div 
-              className="flex items-center space-x-4 mb-4 md:mb-0"
-              whileHover={{ color: "#ea580c" }}
-            >
-              <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">Sitemap</a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">Contact</a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">Careers</a>
-            </motion.div>
+           
             
             <div className="text-gray-500 text-sm flex items-center">
               <motion.span

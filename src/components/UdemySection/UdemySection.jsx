@@ -88,7 +88,7 @@ export default function UdemyCourseCarousel() {
   };
 
   return (
-    <div className={`w-full py-12 relative bg-gray-900`}>
+    <div className={`w-full py-4 relative bg-gray-900`}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-center mt-2 mb-8 p-0">
                 <div data-aos="fade-up">

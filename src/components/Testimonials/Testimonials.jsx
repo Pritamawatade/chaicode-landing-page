@@ -105,7 +105,7 @@ const CodingEasterEgg = ({ active, language, tag }) => {
   return (
     <AnimatePresence>
       {active && (
-        <div className="opacity-55">
+        <div className="opacity-40">
           <motion.div
           className="absolute -right-4 top-12  bg-gray-900 text-orange-300 p-3 rounded-lg shadow-xl transform rotate-2 z-20 text-xs font-mono"
           initial={{ opacity: 0, scale: 0.7, y: 20 }}
@@ -169,7 +169,7 @@ const TestimonialCard = ({ testimonial, isActive }) => {
 
   return (
     <motion.div
-      className="relative bg-orange-600 rounded-2xl shadow-xl overflow-hidden w-full max-w-md mx-auto"
+      className="relative bg-[#e85c0c] rounded-2xl shadow-xl overflow-hidden w-full max-w-md mx-auto"
       animate={controls}
       initial={{ scale: 0.95, opacity: 0.7 }}
       transition={{ duration: 0.4 }}
@@ -324,7 +324,7 @@ const TestimonialCard = ({ testimonial, isActive }) => {
             <Quote size={32} />
           </div>
           <motion.p
-            className="text-gray-50 pt-2 pl-6 relative z-10 leading-relaxed"
+            className="text-white pt-2 pl-6 relative z-10 leading-relaxed"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -418,7 +418,7 @@ export default function TestimonialsSection() {
   );
 
   return (
-    <div className="bg-gradient-to-b from-black to-gray-900 py-16 relative overflow-hidden">
+    <div className="bg-gradient-to-b from-black to-gray-900 py-8 relative overflow-hidden">
       <BinaryBackground />
 
       {/* Floating code icons */}
@@ -491,7 +491,7 @@ export default function TestimonialsSection() {
           <div className="h-1 w-24 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto"></div>
 
           <motion.p
-            className="text-gray-700 mt-4 max-w-2xl mx-auto relative"
+            className="text-white mt-4 max-w-2xl mx-auto relative"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -653,7 +653,7 @@ export default function TestimonialsSection() {
 const StatCard = ({ icon, number, text }) => {
   return (
     <motion.div
-      className="bg-orange-500 rounded-xl border border-orange-100 p-6 shadow-lg relative overflow-hidden"
+      className="bg-[#e85c0c] rounded-xl border border-orange-100 p-6 shadow-lg relative overflow-hidden"
       whileHover={{
         y: -5,
         boxShadow:

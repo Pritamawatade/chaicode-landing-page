@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Users, Code, BookOpen, MessageSquare, Award } from "lucide-react";
+import { Users, Code, BookOpen, MessageSquare, Award , DollarSign } from "lucide-react";
 import CountUp from "react-countup";
 
 export default function HeroSection() {
@@ -91,7 +91,7 @@ export default function HeroSection() {
         </motion.div>
         {/* Features */}
         <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-10 justify-items-center "
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-10 justify-items-center relative"
           initial="hidden"
           animate="visible"
           variants={{
@@ -102,7 +102,9 @@ export default function HeroSection() {
             },
           }}
         >
+          
           {features.map((feature, index) => (
+            
             <motion.div
               key={index}
               whileHover={{ y: -6 }}

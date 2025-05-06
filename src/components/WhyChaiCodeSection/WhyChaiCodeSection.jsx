@@ -55,14 +55,20 @@ const WhyChooseUs = () => {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+      <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
         {cardData.map((card, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.05, rotate: 1 }}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.15, duration: 0.5 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
             variants={{
               hidden: { opacity: 0, y: 40 },
               visible: {
@@ -71,7 +77,6 @@ const WhyChooseUs = () => {
                 transition: { duration: 0.5, ease: "easeInOut" },
               },
             }}
-            viewport={{ once: true }}
             className="bg-zinc-900 rounded-2xl p-6 shadow-lg border border-orange-500 hover:shadow-orange-500/30 hover:bg-zinc-800 transition-colors duration-300"
           >
             <div className="flex items-center mb-4">{card.icon}</div>
@@ -86,9 +91,11 @@ const WhyChooseUs = () => {
 
         <motion.div
           whileHover={{ scale: 1.05 }}
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+
           className="md:col-span-3 mt-8 flex flex-col md:flex-row items-center justify-between bg-zinc-800 border border-orange-400 p-6 rounded-2xl"
         >
           <img
@@ -107,7 +114,7 @@ const WhyChooseUs = () => {
             </p>
           </div>
         </motion.div>
-      </div>
+      </motion.div>
 
       <motion.div
         whileHover={{ scale: 1.1 }}

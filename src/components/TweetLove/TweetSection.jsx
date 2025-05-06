@@ -41,7 +41,7 @@ const TweetEmbed = ({ tweetId }) => {
 export default function TweetSection() {
   // List your tweet IDs here
   const tweetIds = [
-    "1906393735203836076", // sourabh
+    "1905574126112153860", // Hitesh
     "1917588204506734937", // Pritam
     "1907045909394788416", // Jaani
   ];

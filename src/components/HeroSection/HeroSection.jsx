@@ -9,7 +9,7 @@ import {
   DollarSign,
   CheckCheck,
   LaptopMinimal,
-  SquareChevronRight
+  SquareChevronRight,
 } from "lucide-react";
 import CountUp from "react-countup";
 
@@ -25,33 +25,46 @@ export default function HeroSection() {
         />
       ),
     },
-    { text: "Code reviews", icon: <Code size={18} />,
-    hoverIcon: (
-      <SquareChevronRight
-        size={32}
-        className="text-white filter drop-shadow-[0_0_1px_#ffa500]"
-      />
-    ), },
-    { text: "Virtual hostel", icon: <BookOpen size={18} />,
-    hoverIcon: (
-      <LaptopMinimal
-        size={32}
-        className="text-white filter drop-shadow-[0_0_1px_#ffa500]"
-      />
-    ), },
-    { text: "Doubt sessions", icon: <MessageSquare size={18} />,
-    hoverIcon: (
-      <CheckCheck
-        size={32}
-        className="text-white filter drop-shadow-[0_0_1px_#ffa500]"
-      />
-    ), },
-    { text: "Bounties", icon: <Award size={18} />, hoverIcon: (
-      <DollarSign
-        size={32}
-        className="text-white filter drop-shadow-[0_0_1px_#ffa500]"
-      />
-    ), },
+    {
+      text: "Code reviews",
+      icon: <Code size={18} />,
+      hoverIcon: (
+        <SquareChevronRight
+          size={32}
+          className="text-white filter drop-shadow-[0_0_1px_#ffa500]"
+        />
+      ),
+    },
+    {
+      text: "Virtual hostel",
+      icon: <BookOpen size={18} />,
+      hoverIcon: (
+        <LaptopMinimal
+          size={32}
+          className="text-white filter drop-shadow-[0_0_1px_#ffa500]"
+        />
+      ),
+    },
+    {
+      text: "Doubt sessions",
+      icon: <MessageSquare size={18} />,
+      hoverIcon: (
+        <CheckCheck
+          size={32}
+          className="text-white filter drop-shadow-[0_0_1px_#ffa500]"
+        />
+      ),
+    },
+    {
+      text: "Bounties",
+      icon: <Award size={18} />,
+      hoverIcon: (
+        <DollarSign
+          size={32}
+          className="text-white filter drop-shadow-[0_0_1px_#ffa500]"
+        />
+      ),
+    },
   ];
 
   return (
@@ -75,15 +88,56 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Heading */}
-        <motion.h1
-          className=" mt-8 text-4xl sm:text-3xl lg:text-6xl font-bold leading-tight text-white mb-6 selection:bg-orange-500 selection:text-white"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <span className="text-orange-500 lg:text-7xl sm:text-3xl">C</span>onsistancy And{" "}
-          <span className="text-orange-500 lg:text-7xl sm:text-3xl">C</span>ommunity
-        </motion.h1>
+        <motion.div
+  className="relative group w-fit mx-auto mt-8 text-center"
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
+  <h1 className="font-[bona-nova-sc-regular] text-4xl sm:text-3xl lg:text-6xl font-bold leading-tight text-white mb-2 selection:bg-orange-500 selection:text-white">
+    <span className="relative inline-block">
+      <span className="text-orange-500 font-[bona-nova-sc-regular] lg:text-7xl sm:text-3xl">C</span>onsistency
+      <motion.div
+        className="absolute -bottom-1 left-0 h-1 w-full bg-orange-500 rounded-full"
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+        style={{ transformOrigin: "left" }}
+      />
+    </span>{" "}
+    &
+    <span className="relative inline-block ml-2">
+      <span className="text-orange-500 font-[bona-nova-sc-regular] lg:text-7xl sm:text-3xl">C</span>ommunity
+      <motion.div
+        className="absolute -bottom-1 left-0 h-1 w-full bg-orange-500 rounded-full"
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
+        style={{ transformOrigin: "left" }}
+      />
+    </span>
+  </h1>
+
+  {/* Community quote appears briefly and fades out */}
+  <motion.div
+    className="text-sm text-zinc-400 mt-2"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ delay: 2, duration: 1 }}
+  >
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 2.2, duration: 0.5 }}
+      exit={{ opacity: 0 }}
+    >
+      Built together. Grown together.
+    </motion.p>
+  </motion.div>
+</motion.div>
+
+
         <motion.h1
           className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6 selection:bg-orange-500 selection:text-white"
           initial={{ opacity: 0, y: 40 }}
@@ -91,7 +145,7 @@ export default function HeroSection() {
           transition={{ duration: 1 }}
         >
           An{" "}
-          <span className="text-[#e85c0c] selection:bg-orange-500 selection:text-white">
+          <span className="font-[bitter-font] text-[#e85c0c] selection:bg-orange-500 selection:text-white">
             &lt;Unmatched /&gt;
           </span>{" "}
           Learning Experience for coding courses.
@@ -179,9 +233,7 @@ export default function HeroSection() {
                 }}
                 className="absolute right-8 top-[-5px ] -translate-y-1/2 z-0"
               >
-                <span className=" rounded-full p-1 ">
-              {feature.hoverIcon}
-                </span>
+                <span className=" rounded-full p-1 ">{feature.hoverIcon}</span>
               </motion.div>
             </motion.div>
           ))}

@@ -53,8 +53,20 @@ const BenefitCard = ({ icon: Icon, title, description }) => {
         boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.2)",
         transition: { duration: 0.2 },
       }}
-      initial="initial"
-      animate="visible"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{
+        opacity: [0, 1],
+        y: [50, 0],
+        transition: {
+          duration: 0.5,
+          ease: "easeInOut",
+        },
+      }}
+      viewport={{ once: true }}
+      transition={{
+        staggerChildren: 1,
+        delayChildren: 1, 
+      }}
     >
       <div className="p-6">
         <div className="flex items-center mb-3">
@@ -75,9 +87,10 @@ const NetworkCard = ({ title, description }) => {
     <motion.div
       className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 col-span-3 md:col-span-2 relative"
       variants={itemVariants}
-      whileHover="hover"
-      initial="initial"
-      animate="visible"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
     >
       <div className="p-6 flex flex-col md:flex-row gap-4">
         <div className="md:w-1/3 mb-4 md:mb-0">
@@ -427,8 +440,8 @@ export default function CohortBenefitsSection() {
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6"
           variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+         
+          // transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {benefitsData.map((benefit, index) => (
             <BenefitCard

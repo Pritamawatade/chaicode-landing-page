@@ -418,7 +418,10 @@ export default function TestimonialsSection() {
   );
 
   return (
-    <div id="review" className="bg-gradient-to-b from-black to-gray-900 py-8 relative overflow-hidden">
+    <div
+      id="review"
+      className="bg-gradient-to-b from-black to-gray-900 py-8 relative overflow-hidden"
+    >
       <BinaryBackground />
 
       {/* Floating code icons */}
@@ -631,18 +634,20 @@ export default function TestimonialsSection() {
           <StatCard icon={<Zap />} number="250%" text="Average Salary Boost" />
         </motion.div>
       </div>
-
-      <div className="text-center flex items-center justify-center mt-6">
+      <div className="text-center flex items-center justify-center mt-6 px-4">
         <motion.p
-          className="text-xl md:text-5xl font-bold text-center text-white sm:text-6xl md:tracking-wide md:leading-snug"
-          style={{ color: "rgba(255, 255, 255, 0.87)" }}
-          initial={{ opacity: 0, y: 10 }}
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-orange-400 to-pink-300 sm:tracking-wide sm:leading-tight"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
         >
-          You may found your next co-founder with us. Join Now
+          You May Find Your Next Co-Founder Here
+          <span className="block mt-1">Join Now</span>
         </motion.p>
       </div>
+
+      
       <PremiumButton />
 
       <DeviderLine />

@@ -6,7 +6,7 @@ import PremiumButton from "../Button/LiquidButton";
 
 function CohortSection() {
   return (
-    <>
+    <div id="cohort">
       <DeviderLine />
       <div className="py-8 px-4 md:px-8 lg:px-24">
         <CourseCarousel />
@@ -18,7 +18,7 @@ function CohortSection() {
 
         <DeviderLine />
       </div>
-    </>
+    </div>
   );
 }
 

@@ -56,10 +56,10 @@ export default function HeroSection() {
 
   return (
     <div className="bg-black text-white py-12 px-6 md:px-12 lg:px-24 mt-16">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-4xl mx-auto text-center mt-8 mb-0">
         {/* Badge */}
         <motion.div
-          className="inline-block bg-[#160c01] px-4 py-2 mb-4 border border-[#e85c0c] rounded-full"
+          className="inline-block bg-[#160c01] px-4 py-2 mb-0 border border-[#e85c0c] rounded-full"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -76,13 +76,13 @@ export default function HeroSection() {
 
         {/* Heading */}
         <motion.h1
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6 selection:bg-orange-500 selection:text-white"
+          className=" mt-8 text-4xl sm:text-3xl lg:text-6xl font-bold leading-tight text-white mb-6 selection:bg-orange-500 selection:text-white"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <span className="text-orange-500 lg:text-7xl">C</span>onsistancy And{" "}
-          <span className="text-orange-500 lg:text-7xl">C</span>ommunity
+          <span className="text-orange-500 lg:text-7xl sm:text-3xl">C</span>onsistancy And{" "}
+          <span className="text-orange-500 lg:text-7xl sm:text-3xl">C</span>ommunity
         </motion.h1>
         <motion.h1
           className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6 selection:bg-orange-500 selection:text-white"

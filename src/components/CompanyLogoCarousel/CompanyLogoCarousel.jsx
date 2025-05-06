@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, scale } from "framer-motion";
 import DeviderLine from "../DeviderLine/DeviderLine";
 
 // Company logos data

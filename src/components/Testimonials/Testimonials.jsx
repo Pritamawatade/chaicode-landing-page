@@ -107,23 +107,23 @@ const CodingEasterEgg = ({ active, language, tag }) => {
       {active && (
         <div className="opacity-40">
           <motion.div
-          className="absolute -right-4 top-12  bg-gray-900 text-orange-300 p-3 rounded-lg shadow-xl transform rotate-2 z-20 text-xs font-mono"
-          initial={{ opacity: 0, scale: 0.7, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.7, y: 20 }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="opacity-50 flex items-center gap-2 mb-2 text-orange-400 border-b border-orange-800 pb-1">
-            <Code size={12} />
-            <span>{language}</span>
-          </div>
-          <pre className="whitespace-pre">
-            {snippets[language] || snippets.JavaScript}
-          </pre>
-          <div className="mt-2 flex justify-end text-orange-400">
-            <span>{tag}</span>
-          </div>
-        </motion.div>
+            className="absolute -right-4 top-12  bg-gray-900 text-orange-300 p-3 rounded-lg shadow-xl transform rotate-2 z-20 text-xs font-mono"
+            initial={{ opacity: 0, scale: 0.7, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.7, y: 20 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="opacity-50 flex items-center gap-2 mb-2 text-orange-400 border-b border-orange-800 pb-1">
+              <Code size={12} />
+              <span>{language}</span>
+            </div>
+            <pre className="whitespace-pre">
+              {snippets[language] || snippets.JavaScript}
+            </pre>
+            <div className="mt-2 flex justify-end text-orange-400">
+              <span>{tag}</span>
+            </div>
+          </motion.div>
         </div>
       )}
     </AnimatePresence>
@@ -418,7 +418,7 @@ export default function TestimonialsSection() {
   );
 
   return (
-    <div className="bg-gradient-to-b from-black to-gray-900 py-8 relative overflow-hidden">
+    <div id="review" className="bg-gradient-to-b from-black to-gray-900 py-8 relative overflow-hidden">
       <BinaryBackground />
 
       {/* Floating code icons */}
@@ -576,7 +576,7 @@ export default function TestimonialsSection() {
 
           {/* Nav Buttons */}
           <motion.button
-            className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center text-orange-500 -ml-6"
+            className="absolute cursor-pointer md:left-0 sm:left-2 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center text-orange-500 ml-2"
             onClick={handlePrev}
             whileHover={{ scale: 1.1, x: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -587,7 +587,7 @@ export default function TestimonialsSection() {
           </motion.button>
 
           <motion.button
-            className="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center text-orange-500 -mr-6"
+            className="absolute cursor-pointer right-0  top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center text-orange-500 mr-2"
             onClick={handleNext}
             whileHover={{ scale: 1.1, x: 2 }}
             whileTap={{ scale: 0.9 }}
@@ -632,9 +632,10 @@ export default function TestimonialsSection() {
         </motion.div>
       </div>
 
-      <div className="flex items-center justify-center">
+      <div className="text-center flex items-center justify-center mt-6">
         <motion.p
-          className="text-2xl md:text-4xl text-white pt-16 font-bold"
+          className="text-xl md:text-5xl font-bold text-center text-white sm:text-6xl md:tracking-wide md:leading-snug"
+          style={{ color: "rgba(255, 255, 255, 0.87)" }}
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

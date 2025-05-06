@@ -20,7 +20,7 @@ import DeviderLine from "../DeviderLine/DeviderLine";
 const testimonials = [
   {
     id: 1,
-    name: "Priya Sharma",
+    name: "Hardik kumar",
     position: "Frontend Developer at Microsoft",
     image:
       "https://img.freepik.com/premium-vector/vector-flat-illustration-grayscale-avatar-user-profile-person-icon-profile-picture-business-profile-woman-suitable-social-media-profiles-icons-screensavers-as-templatex9_719432-1339.jpg?semt=ais_hybrid&w=740",
@@ -32,7 +32,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Rahul Patel",
+    name: "Pritam Awatade",
     position: "Full-Stack Engineer at Flipkart",
     image:
       "https://img.freepik.com/premium-vector/vector-flat-illustration-grayscale-avatar-user-profile-person-icon-profile-picture-business-profile-woman-suitable-social-media-profiles-icons-screensavers-as-templatex9_719432-1339.jpg?semt=ais_hybrid&w=740",
@@ -44,7 +44,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Ananya Desai",
+    name: "Ansh mishra",
     position: "Machine Learning Engineer at Amazon",
     image:
       "https://img.freepik.com/premium-vector/vector-flat-illustration-grayscale-avatar-user-profile-person-icon-profile-picture-business-profile-woman-suitable-social-media-profiles-icons-screensavers-as-templatex9_719432-1339.jpg?semt=ais_hybrid&w=740",
@@ -56,7 +56,7 @@ const testimonials = [
   },
   {
     id: 4,
-    name: "Vikram Singh",
+    name: "Deepak kumar",
     position: "Blockchain Developer & Startup Founder",
     image:
       "https://img.freepik.com/premium-vector/vector-flat-illustration-grayscale-avatar-user-profile-person-icon-profile-picture-business-profile-woman-suitable-social-media-profiles-icons-screensavers-as-templatex9_719432-1339.jpg?semt=ais_hybrid&w=740",
@@ -68,7 +68,7 @@ const testimonials = [
   },
   {
     id: 5,
-    name: "Neha Gupta",
+    name: "Jay kadlag",
     position: "Senior Developer at Google",
     image:
       "https://img.freepik.com/premium-vector/vector-flat-illustration-grayscale-avatar-user-profile-person-icon-profile-picture-business-profile-woman-suitable-social-media-profiles-icons-screensavers-as-templatex9_719432-1339.jpg?semt=ais_hybrid&w=740",

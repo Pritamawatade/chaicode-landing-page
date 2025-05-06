@@ -89,70 +89,75 @@ export default function HeroSection() {
 
         {/* Heading */}
         <motion.div
-  className="relative group w-fit mx-auto mt-8 text-center"
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
->
-  <h1 className="font-[bona-nova-sc-regular] text-4xl sm:text-3xl lg:text-6xl font-bold leading-tight text-white mb-2 selection:bg-orange-500 selection:text-white">
-    <span className="relative inline-block">
-      <span className="text-orange-500 font-[bona-nova-sc-regular] lg:text-7xl sm:text-3xl">C</span>onsistency
-      <motion.div
-        className="absolute -bottom-1 left-0 h-1 w-full bg-orange-500 rounded-full"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
-        style={{ transformOrigin: "left" }}
-      />
-    </span>{" "}
-    &
-    <span className="relative inline-block ml-2">
-      <span className="text-orange-500 font-[bona-nova-sc-regular] lg:text-7xl sm:text-3xl">C</span>ommunity
-      <motion.div
-        className="absolute -bottom-1 left-0 h-1 w-full bg-orange-500 rounded-full"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
-        style={{ transformOrigin: "left" }}
-      />
-    </span>
-  </h1>
+          className="relative group w-fit mx-auto mt-8 text-center"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h1 className="font-[bona-nova-sc-regular] text-4xl sm:text-3xl lg:text-6xl font-bold leading-tight text-white mb-2 selection:bg-orange-500 selection:text-white">
+            <span className="relative inline-block">
+              <span className="text-orange-500 font-[bona-nova-sc-regular] lg:text-7xl sm:text-3xl">
+                C
+              </span>
+              onsistency
+              <motion.div
+                className="absolute -bottom-1 left-0 h-1 w-full bg-orange-500 rounded-full"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+                style={{ transformOrigin: "left" }}
+              />
+            </span>{" "}
+            &
+            <span className="relative inline-block ml-2">
+              <span className="text-orange-500 font-[bona-nova-sc-regular] lg:text-7xl sm:text-3xl">
+                C
+              </span>
+              ommunity
+              <motion.div
+                className="absolute -bottom-1 left-0 h-1 w-full bg-orange-500 rounded-full"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
+                style={{ transformOrigin: "left" }}
+              />
+            </span>
+          </h1>
 
-  {/* Community quote appears briefly and fades out */}
-  <motion.div
-    className="text-sm text-zinc-400 mt-2"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ delay: 2, duration: 1 }}
-  >
-    <motion.p
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 2.2, duration: 0.5 }}
-      exit={{ opacity: 0 }}
-    >
-      Built together. Grown together.
-    </motion.p>
-  </motion.div>
-</motion.div>
-
+          {/* Community quote appears briefly and fades out */}
+          <motion.div
+            className="text-sm text-zinc-400 mt-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 2, duration: 1 }}
+          >
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2.2, duration: 0.5 }}
+              exit={{ opacity: 0 }}
+            >
+              Built together. Grown together.
+            </motion.p>
+          </motion.div>
+        </motion.div>
 
         <motion.h1
-          className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6 selection:bg-orange-500 selection:text-white"
+          className="text-2xl font[bona-nova-sc-regular] sm:text-4xl lg:text-5xl font-bold leading-tight text-white mb-6 selection:bg-orange-500 selection:text-white"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
           An{" "}
-          <span className="font-[bitter-font] text-[#e85c0c] selection:bg-orange-500 selection:text-white">
+          <span className="font-[archivo-font] text-[#e85c0c] selection:bg-orange-500 selection:text-white">
             &lt;Unmatched /&gt;
           </span>{" "}
           Learning Experience for coding courses.
         </motion.h1>
 
         {/* Paragraph */}
-        <motion.p
+        {/* <motion.p
           className="text-gray-300 text-lg sm:text-xl mb-10 mx-auto text-center leading-relaxed max-w-xl sm:max-w-2xl md:max-w-xl lg:max-w-2xl xl:max-w-3xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -161,7 +166,7 @@ export default function HeroSection() {
           Content is everywhere, but we provide a learning experience that is
           unmatched — bounties, peer learning, code reviews, virtual hostel,
           alumni network, doubt sessions, and group projects.
-        </motion.p>
+        </motion.p> */}
 
         {/* CTA */}
         <motion.div
@@ -170,19 +175,21 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <motion.button
-            className="bg-[#e85c0c] hover:bg-[#e85c0c]/90 text-white font-bold text-lg px-6 py-4 rounded-xl shadow-lg shadow-orange-500/40 flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer"
-            whileHover={{ scale: 1.005 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span>Check all Live Cohorts</span>
-            <motion.span
-              animate={{ x: [0, 5, 0] }}
-              transition={{ repeat: Infinity, duration: 1.5 }}
+          <a href="https://hitesh.ai/cohort/" className="cursor-pointer" target="_blank">
+            <motion.button
+              className="bg-[#e85c0c] hover:bg-[#e85c0c]/90 text-white font-bold text-lg px-6 py-4 rounded-xl shadow-lg shadow-orange-500/40 flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer"
+              whileHover={{ scale: 1.005 }}
+              whileTap={{ scale: 0.95 }}
             >
-              →
-            </motion.span>
-          </motion.button>
+              <span>Check all Live Cohorts</span>
+              <motion.span
+                animate={{ x: [0, 5, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5 }}
+              >
+                →
+              </motion.span>
+            </motion.button>
+          </a>
         </motion.div>
         {/* Features */}
         <motion.div

@@ -25,8 +25,12 @@ const tech_companies = [
 ];
 
 const startups = [
-  { name: "Stripe", logo: stripe },
-  { name: "Airtable", logo: airtable },
+  { name: "Stripe", logo: {src: stripe, alt: "Stripe"} },
+  { name: "Airtable", logo: {src: airtable, alt: "Airtable"} },
+  { name: "Stripe", logo: {src: stripe, alt: "Stripe"} },
+  { name: "Airtable", logo: {src: airtable, alt: "Airtable"} },
+  { name: "Stripe", logo: {src: stripe, alt: "Stripe"} },
+  { name: "Airtable", logo: {src: airtable, alt: "Airtable"} },
 ];
 
 export default function CompanyLogoCarousel() {

@@ -442,7 +442,7 @@ export default function CourseCarousel({ courses = dummyCourses }) {
           </motion.button>
 
           <motion.button
-            className="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center text-orange-600 sm:mr-[-18px] mr-6"
+            className="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center text-orange-600 mr-[-19px]"
             onClick={handleNext}
             whileHover={{ scale: 1.1, backgroundColor: "#FFF7ED", x: 2 }}
             whileTap={{ scale: 0.95 }}
@@ -450,7 +450,7 @@ export default function CourseCarousel({ courses = dummyCourses }) {
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <ChevronRight size={24} />
+            <ChevronRight size={24} />  
           </motion.button>
 
           {/* Page Indicators */}

@@ -1,26 +1,32 @@
 import { useState, useEffect } from "react";
 import { motion, scale } from "framer-motion";
 import DeviderLine from "../DeviderLine/DeviderLine";
+import google from "../../assets/google.svg";
+import apple from "../../assets/apple.svg";
+import microsoft from "../../assets/microsoft.svg";
+import meta from "../../assets/meta.svg";
+import amazon from "../../assets/amazon.svg";
+import netflix from "../../assets/netflix.svg";
+import tesla from "../../assets/tesla.svg";
+import stripe from "../../assets/stripe.svg";
+import airtable from "../../assets/airtable.svg";
+
+
 
 // Company logos data
 const tech_companies = [
-  { name: "Google", logo: "🔍" },
-  { name: "Apple", logo: "🍎" },
-  { name: "Microsoft", logo: "⊞" },
-  { name: "Meta", logo: "ⓜ" },
-  { name: "Amazon", logo: "📦" },
-  { name: "Netflix", logo: "🎬" },
-  { name: "Tesla", logo: "⚡" },
+  { name: "Google", logo: { src: google, alt: "Google" } },
+  { name: "Apple", logo:  {src: apple, alt: "Apple"} },
+  { name: "Microsoft", logo: {src: microsoft, alt: "Microsoft"} },
+  { name: "Meta", logo: {src: meta, alt: "Meta"} },
+  { name: "Amazon", logo: {src: amazon, alt: "Amazon"} },
+  { name: "Netflix", logo: {src: netflix, alt: "Netflix"} },
+  { name: "Tesla", logo: {src: tesla, alt: "Tesla"} },
 ];
 
 const startups = [
-  { name: "Stripe", logo: "💳" },
-  { name: "Airbnb", logo: "🏠" },
-  { name: "SpaceX", logo: "🚀" },
-  { name: "Notion", logo: "📝" },
-  { name: "Figma", logo: "🎨" },
-  { name: "Coinbase", logo: "💰" },
-  { name: "Airtable", logo: "📊" },
+  { name: "Stripe", logo: stripe },
+  { name: "Airtable", logo: airtable },
 ];
 
 export default function CompanyLogoCarousel() {
@@ -105,7 +111,7 @@ export default function CompanyLogoCarousel() {
               }}
             >
               <div className="cursor-pointer flex items-center justify-center w-16 h-16 mb-3 rounded-full bg-white shadow-lg text-4xl">
-                {company.logo}
+                <img src={company.logo.src} alt={company.logo.alt} />
               </div>
               <p className="font-medium text-white text-center text-sm max-w-[6rem]">
                 {company.name}
